@@ -1,0 +1,17 @@
+language: node_js
+sudo: required
+services:
+  - docker
+
+node_js:
+    - "8"
+
+install:
+    - npm install
+
+script:
+    - npm run docker-build
+
+after_success:
+    - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" confmr.azurecr.io
+    - npm run docker-push
