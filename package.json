@@ -23,7 +23,7 @@
         "build-mobile-android": "npm run build && npm run package-mobile-android",
         "ios-testflight": "npm run build-mobile-ios && fastlane ios beta",
         "predocker-build": "npm run build",
-        "docker-build": "docker build -t confmr.azurecr.io/x-celerate-2017-angular-ci-cd:latest .",
+        "docker-build": "npm run build && docker build -t confmr.azurecr.io/x-celerate-2017-angular-ci-cd:latest .",
         "docker-push": "docker push confmr.azurecr.io/x-celerate-2017-angular-ci-cd"
     },
     "author": "Manuel Rauber <manuel.rauber@thinktecture.com>",
