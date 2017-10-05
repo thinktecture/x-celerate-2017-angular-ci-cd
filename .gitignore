@@ -39,3 +39,7 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+fastlane/report.xml
+/x-celerate.app.dSYM.zip
+/x-celerate.ipa
