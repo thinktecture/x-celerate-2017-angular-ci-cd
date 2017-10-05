@@ -47,26 +47,9 @@ function buildTrayIcon() {
       label: 'SWAPI',
       submenu: [
         {
-          label: 'Planets',
-          click: function () {
-            win.webContents.send('navigateTo', 'starwars-planets');
-          }
-        },
-        {
           label: 'People',
           click: function () {
             win.webContents.send('navigateTo', 'starwars-people');
-          }
-        }
-      ]
-    },
-    {
-      label: 'Poké-API',
-      submenu: [
-        {
-          label: 'Pokémons',
-          click: function () {
-            win.webContents.send('navigateTo', 'pokemon-list');
           }
         }
       ]
@@ -78,7 +61,7 @@ function buildTrayIcon() {
   ]);
 
   trayApp = new Tray(trayIconPath);
-  trayApp.setToolTip('AngularSample');
+  trayApp.setToolTip('x-celerate');
   trayApp.setContextMenu(contextMenu);
 }
 

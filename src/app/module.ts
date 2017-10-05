@@ -13,6 +13,9 @@ import {PeopleListComponent} from './components/people/list/list';
 import {ROUTES} from './routes';
 import {StarwarsService} from './services/starwars';
 import {WindowRef} from './services/windowRef';
+import {ShareService, shareServiceFactory, shareServiceFactoryDeps} from './services/share';
+import {ElectronService} from './services/electron';
+import {DesktopIntegrationService} from './services/desktopIntegration';
 
 @NgModule({
     declarations: [
@@ -31,7 +34,14 @@ import {WindowRef} from './services/windowRef';
     ],
     providers: [
         StarwarsService,
-        WindowRef
+        WindowRef,
+        ElectronService,
+        DesktopIntegrationService,
+        {
+            provide: ShareService,
+            useFactory: shareServiceFactory,
+            deps: shareServiceFactoryDeps
+        }
     ],
     bootstrap: [AppComponent]
 })
