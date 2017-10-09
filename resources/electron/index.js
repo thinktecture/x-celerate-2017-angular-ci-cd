@@ -49,7 +49,7 @@ function buildTrayIcon() {
         {
           label: 'People',
           click: function () {
-            win.webContents.send('navigateTo', 'starwars-people');
+            win.webContents.send('toHome', 'starwars-people');
           }
         }
       ]

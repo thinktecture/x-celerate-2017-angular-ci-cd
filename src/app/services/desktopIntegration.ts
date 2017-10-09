@@ -13,7 +13,7 @@ export class DesktopIntegrationService {
       return;
     }
 
-    this._electronService.electron.ipcRenderer.on('navigateTo', (event, data) => {
+    this._electronService.electron.ipcRenderer.on('toHome', (event, data) => {
       this._zone.run(() => {
         this._handleNavigateTo(data);
       });
