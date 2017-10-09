@@ -6,6 +6,8 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
+        "test": "ng test",
+        "e2e": "ng e2e",
         "build": "rimraf build && ng build --prod --build-optimizer --base-href=\".\" --output-path=\"build\"",
         "lint": "ng lint",
         "prepare-electron": "mkdirp ./tmp/web && ncp resources/electron tmp && ncp build tmp/web",
