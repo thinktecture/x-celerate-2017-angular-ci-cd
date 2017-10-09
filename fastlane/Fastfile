@@ -3,14 +3,7 @@ fastlane_version "2.60.1"
 default_platform :ios
 
 platform :ios do
-  before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    # cocoapods
-    # carthage
-  end
-
   desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
   lane :beta do
     gym(
         export_method: "app-store",
