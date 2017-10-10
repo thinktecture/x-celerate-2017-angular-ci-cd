@@ -23,7 +23,7 @@ export class DesktopIntegrationService {
   private _handleNavigateTo(data) {
     switch (data) {
       case 'starwars-people':
-        this._router.navigate(['/starwars/list/people/1']);
+        this._router.navigate(['/people/1']);
         break;
     }
   }
