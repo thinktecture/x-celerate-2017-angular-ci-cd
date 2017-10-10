@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('foobar App', () => {
+describe('x-celerate-2017-angular-ci-cd App', () => {
     let page: AppPage;
 
     beforeEach(() => {
